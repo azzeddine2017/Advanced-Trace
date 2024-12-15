@@ -111,7 +111,7 @@ concurrent.acquireResource("process", "cpu")
 # ... processing operation
 concurrent.releaseResource("process", "cpu")
 concurrent.endOperation("process")
-
+```
 
 ### 2. Performance Analysis
 ```ring
@@ -123,7 +123,7 @@ perf.startProfiling()
 for i = 1 to 1000
     heavyOperation()
 next
-
+```
 perf.endProfiling()
 report = perf.generateReport()
 
