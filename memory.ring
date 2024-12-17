@@ -19,7 +19,7 @@ func memory()
     else
         see "Unsupported operating system!" + nl
         return 
-    end
+    ok
     return memUsed
 
 
@@ -28,7 +28,7 @@ func extractMemoryUsageLinux(output)
     lines = split(output, nl)  # Split the output into lines
     if len(lines) < 2
         return 
-    end
+    ok
     # Look for the line that starts with "Mem:" (free -m output)
     for line in lines
         if left(line, 4) = "Mem:"
@@ -43,7 +43,6 @@ func extractMemoryUsageLinux(output)
 
 # Function to extract memory usage from Windows system output
 func extractMemoryUsageWindows(output)
-	
     lines = split(output, nl)  # Split the output into lines
     freeMemory = 0
     totalMemory = 0
