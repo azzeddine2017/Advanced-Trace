@@ -123,8 +123,9 @@ perf.startProfiling()
 for i = 1 to 1000
     heavyOperation()
 next
-```
 perf.endProfiling()
 report = perf.generateReport()
+```
+
 
 
